@@ -1,0 +1,60 @@
+body{
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: #fff;
+    box-sizing: border-box;
+}
+button::selection{
+    color: aquamarine;
+}
+.container{
+    display: grid;
+    justify-content: center;
+    margin-inline: auto;
+    color: #fff;
+}
+.row{
+    display: flex;
+    width: 100%;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    outline: none;
+}
+.box:hover{
+    opacity: 0.8;
+}
+section{
+    background-color: black;
+    text-align: right;
+    font-size: 2rem;
+    padding: 20px 10px;
+}
+section::selection{
+    color: aquamarine;
+}
+.cancel-button{
+    background-color: burlywood;
+    width: 50%;
+}
+.back-button{
+    background-color: dodgerblue;
+}
+.number{
+    background-color: dodgerblue;
+}
+.side-buttons{
+    background-color: burlywood;
+}
+.equal-button{
+    background-color: green;
+}
+.zero-button{
+    width: 75%;
+}
+button{
+    color: #fff;
+    font-size: 1.8rem;
+    border: 1px solid;
+}
