@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="animate.css">
+    <style>
+        code{
+            background-color: yellow;
+            padding: 20px;
+        }
+        .cursor{
+            animation: paddle-bounce;
+        }
+        code:hover{
+            animation: paddle-bounce;
+        }
+    </style>
+    
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <code class="cursor Cursor--blinking">const Meleyotan = "Greatness";</code>
+        <button class="target-button">Click Me!</button>
+        <script>
+            const button = document.querySelector('.target-button');
+            button.addEventListener('click', function(){
+                alert('Welcome to JavaScript')
+            });
+        </script>
+        <input placeholder="Type into me!" class="input-to-use">
+        <p class="p-to-use"></p>
+        <script>
+            const input=document.querySelector('.input-to-use');
+            const paragraph=document.querySelector('.p-to-use');
+            input.addEventListener('keyup', function(){
+                paragraph.innerText=input.value;
+                paragraph.style.backgroundColor=input.value;
+                paragraph.style.fontSize='100px';
+            })
+
+        </script>
+        <div class="button-container">
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+        </div>
+        <script>
+            document.querySelector('.button-container').addEventListener('click', function(event){
+                if (event.target.tagName === 'BUTTON'){
+                    alert(`You clicked on button ${event.target.innerText}`);
+                }
+                event.stopPropagation();
+            });
+        </script>
+    </div>
+</body>
+</html>
