@@ -63,7 +63,29 @@ function handleSymbol(value){
 function rerender(){
     result.innerText=buffer;
 }
+
+function flushOperator(intBuffer){
+    if (previousOperator === "+"){
+        runningTotal+=intBuffer;
+    }
+    else if (previousOperator === "-"){
+        runningTotal-=intBuffer;
+    }
+    else if (previousOperator === "*"){
+        runningTotal*=intBuffer;
+    }
+    else{
+        runningTotal/=intBuffer;
+    }
+}
+
 function handleMath(value){
     const intBuffer=parseInt(buffer);
-    console.log(intBuffer);
+    if (runningTotal===0){
+        runningTotal=intBuffer;
+    }else{
+        flushOperator(intBuffer)
+    }
+    previousOperator=value;
+    buffer="0";
 }
