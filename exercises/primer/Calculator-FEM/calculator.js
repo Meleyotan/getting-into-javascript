@@ -26,7 +26,7 @@ function handleNumber(value){
         buffer = value;
     }else{
         buffer+=value;
-        if (buffer.length == 24){
+        if (buffer.length == 23){
             buffer = value;
         }
     }
@@ -43,14 +43,14 @@ function handleSymbol(value){
             if (previousOperator === null){
                 return;
             }
-            flushOperation(parseInt(buffer));
+            flushOperator(parseInt(buffer));
             previousOperator=null;
             buffer = runningTotal;
             runningTotal=0;
             break;
         case '←':
             if (buffer.length === 1){
-                buffer == "0";
+                buffer = "0";
             }else{
                 buffer= buffer.substring(0,buffer.length-1);
             }
@@ -65,4 +65,5 @@ function rerender(){
 }
 function handleMath(value){
     const intBuffer=parseInt(buffer);
+    console.log(intBuffer);
 }
