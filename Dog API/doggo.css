@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0 auto;
+    text-align: center;
+    scrollbar-color: blue;
+    scroll-behavior: smooth;
+}
+.doggos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-auto-rows: auto;
+    grid-gap: 5px;
+    justify-content: center;
+    object-fit: cover;
+    grid-auto-flow: dense;
+}
+.refresh{
+    padding: .5rem 1.5rem;
+    outline: none;
+    font-size: .9rem;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    margin: 10px 0;
+}
+.down-refresh{
+    position: fixed;
+    bottom: 20px;
+    left: 90px;
+}
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+a{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+}
+svg{
+    width: 2rem;
+}
